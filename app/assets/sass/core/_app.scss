@@ -1,0 +1,41 @@
+/* app css stylesheet */
+
+.navbar {
+  @include breakpoint(xs) {
+    background: $colorPrimary;
+  }
+  @include breakpoint(sm) {
+    background-color: purple;
+  }
+  @include breakpoint(md) {
+    background-color: orange;
+  }
+  @include breakpoint(lg) {
+    background-color: green;
+  }
+
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
